@@ -1,25 +1,18 @@
 #!/bin/bash
 
-# Install neovim
-sudo pacman -S --noconfirm neovim
+# Install needed software 
+sudo pacman -S --noconfirm neovim tmux fish
 
-# Create neovim config file
-mkdir -p ~/.config/nvim
-touch ~/.config/nvim/init.lua
+# Symlink neovim config directory  
+ln -s ~/.dotfiles/nvim/ ~/.config/
 
-# Install tmux
-sudo pacman -S --noconfirm tmux
 
 # Create tmux config file
-touch ~/.config/tmux/tmux.conf
-echo "set -g mouse on" >> ~/.config/tmux/tmux.conf
+ln -s ~/.dotfiles/tmux/ ~/.config/
+# echo "set -g mouse on" >> ~/.config/tmux/tmux.conf
 
-# Install fish
-sudo pacman -S --noconfirm fish
 
 # Create fish config file
-mkdir -p ~/.config/fish
-cp fish/config.fish ~/.config/fish/
-touch ~/.config/fish/config.fish
+ln -s ~/.dotfiles/fish/ ~/.config/
 
 
