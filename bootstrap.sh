@@ -3,16 +3,9 @@
 # Install needed software 
 sudo pacman -S --noconfirm neovim tmux fish
 
-# Symlink neovim config directory  
+# Symlink .dotfile directories and files to .config 
 ln -sf ~/.dotfiles/nvim/ ~/.config/
-
-
-# Create tmux config file
 ln -sf ~/.dotfiles/tmux/ ~/.config/
-# echo "set -g mouse on" >> ~/.config/tmux/tmux.conf
-
-
-# Create fish config file
 ln -sf ~/.dotfiles/fish/ ~/.config/
 
 
