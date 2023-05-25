@@ -109,7 +109,6 @@ alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias tarnow='tar -acf '
 alias untar='tar -xvf '
 alias wget='wget -c '
-alias rmpkg="sudo pacman -Rdd"
 alias psmem='ps auxf | sort -nr -k 4'
 alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 alias upd='/usr/bin/garuda-update'
@@ -123,7 +122,6 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='grep -F --color=auto'
 alias egrep='grep -E --color=auto'
-alias hw='hwinfo --short'                          # Hardware Info
 alias big="expac -H M '%m\t%n' | sort -h | nl"     # Sort installed packages according to size in MB
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
 
@@ -133,11 +131,7 @@ alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
-# Help people new to Arch
-alias apt='man pacman'
-alias apt-get='man pacman'
 alias please='sudo'
-alias tb='nc termbin.com 9999'
 
 # Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
