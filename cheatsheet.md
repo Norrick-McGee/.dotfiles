@@ -1,7 +1,15 @@
 # nvim keybinds
 
 # tmux keybinds
-tmux leader: C-space
+<leader>: C-space
+split-h: <leader>h
+split-v: <leader>v
+
+pane-u: <leader>j
+pane-d: <leader>k
+pane-l: <leader>h
+pane-r: <leader>l
+
 
 # tmux commands
 tmux list-sessions
