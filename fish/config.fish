@@ -94,6 +94,8 @@ alias lla='exa -la --color=always --group-directories-first --icons'
 alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
 alias l.='exa -ald --color=always --group-directories-first --icons .*' # show only dotfiles
 alias ip='ip -color'
+alias ld='exa -D --color=always --icons '
+alias lf='exa -F --color=always --icons | grep -v /'
 
 # Replace some more things with better alternatives
 alias cat='bat --style header --style snip --style changes --style header'
