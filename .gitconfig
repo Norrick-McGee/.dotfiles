@@ -1,0 +1,7 @@
+[user]
+	email = norrick.mcgee@gmail.com
+	name = Norrick McGee
+[init]
+	defaultBranch = Main
+[core]
+	editor = nvim

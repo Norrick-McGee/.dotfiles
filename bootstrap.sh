@@ -12,5 +12,6 @@ ln -sf ~/.dotfiles/nvim/ ~/.config/
 ln -sf ~/.dotfiles/tmux/ ~/.config/
 ln -sf ~/.dotfiles/fish/ ~/.config/
 ln -sf ~/.dotfiles/starship.toml ~/.config/
+ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync' > /dev/null 2>&1
