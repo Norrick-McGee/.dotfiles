@@ -39,4 +39,10 @@ return require('packer').startup(function(use)
     }
   }
 
+  use {
+      'norcalli/nvim-terminal.lua'
+  }
+
+
+
 end)

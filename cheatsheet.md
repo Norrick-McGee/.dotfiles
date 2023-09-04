@@ -1,4 +1,6 @@
 # nvim keybinds
+<leader>: space
+netrw: <leader>pv -- vim's default file explorer
 
 # tmux keybinds
 <leader>: C-space
