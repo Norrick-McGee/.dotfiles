@@ -2,10 +2,10 @@
 
 
 # create needed PPAs
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository -y ppa:neovim-ppa/stable
 
 
 
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install neovim tmux exa fish
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install neovim tmux exa fish
