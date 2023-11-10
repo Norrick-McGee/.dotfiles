@@ -11,8 +11,8 @@ sudo apt-get -y install cmake neovim tmux exa fish
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-curl -sS https://starship.rs/install.sh | sh -s -- -y
-
+mkdir -p $HOME/.local/bin/
+curl -sS https://starship.rs/install.sh | sh -s -- -y --bin-dir $HOME/.local/bin
 
 
 # Download Packer (neovim package manager) 
@@ -38,11 +38,12 @@ move_folder "$HOME/.config/nvim" "$HOME/.config/nvim_backup"
 move_folder "$HOME/.config/tmux" "$HOME/.config/tmux_backup"
 move_folder "$HOME/.config/fish" "$HOME/.config/fish_backup"
 
+mkdir -p $HOME/.config/
 # Symlink .dotfile directories and files to .config 
-ln -sf ~/.dotfiles/nvim/ ~/.config/
-ln -sf ~/.dotfiles/tmux/ ~/.config/
-ln -sf ~/.dotfiles/fish/ ~/.config/
-ln -sf ~/.dotfiles/starship.toml ~/.config/
-ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -sf $HOME/.dotfiles/nvim/ $HOME/.config/
+ln -sf $HOME/.dotfiles/tmux/ $HOME/.config/
+ln -sf $HOME/.dotfiles/fish/ $HOME/.config/
+ln -sf $HOME/.dotfiles/starship.toml $HOME/.config/
+ln -sf $HOME/.dotfiles/.gitconfig $HOME/.gitconfig
 
 
