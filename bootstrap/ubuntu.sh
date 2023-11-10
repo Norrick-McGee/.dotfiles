@@ -46,4 +46,5 @@ ln -sf $HOME/.dotfiles/fish/ $HOME/.config/
 ln -sf $HOME/.dotfiles/starship.toml $HOME/.config/
 ln -sf $HOME/.dotfiles/.gitconfig $HOME/.gitconfig
 
+chsh -s $(which fish)
 
