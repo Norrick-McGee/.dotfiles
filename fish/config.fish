@@ -9,6 +9,8 @@ if type "qtile" >> /dev/null 2>&1
    set -x QT_QPA_PLATFORMTHEME "qt5ct"
 end
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 ## Environment setup
 # Apply .profile: use this to put fish compatible .profile stuff in
 if test -f ~/.fish_profile
@@ -32,7 +34,7 @@ end
 
 ## Starship prompt
 if status --is-interactive
-   source ("/usr/bin/starship" init fish --print-full-init | psub)
+   source ("/usr/local/bin/starship" init fish --print-full-init | psub)
 end
 
 ## Functions

@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # Install needed software 
-sudo pacman -S --noconfirm neovim tmux fish exa starship
+sudo pacman -S --noconfirm neovim tmux fish exa
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
+curl -sS https://starship.rs/install.sh | sh -s -- -y
+
 
 # Download Packer (neovim package manager) 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\

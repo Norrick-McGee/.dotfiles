@@ -5,10 +5,14 @@
 sudo add-apt-repository -y ppa:neovim-ppa/stable
 
 
-
 sudo apt-get -y update
 sudo apt-get -y upgrade
-sudo apt-get -y install neovim tmux exa fish
+sudo apt-get -y install cmake neovim tmux exa fish
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
+curl -sS https://starship.rs/install.sh | sh -s -- -y
+
 
 
 # Download Packer (neovim package manager) 
@@ -41,5 +45,4 @@ ln -sf ~/.dotfiles/fish/ ~/.config/
 ln -sf ~/.dotfiles/starship.toml ~/.config/
 ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 
-nvim --headless -c 'autocmd User PackerComplete quitall'  
 
