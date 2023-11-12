@@ -88,6 +88,8 @@ function copy
 end
 
 ## Useful aliases
+alias ssh-start = 'eval (ssh-agent -c)'
+
 # Replace ls with exa
 alias ls='exa --color=always --group-directories-first --icons' # preferred listing
 alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
