@@ -34,7 +34,7 @@ end
 
 ## Starship prompt
 if status --is-interactive
-   source ("/usr/local/bin/starship" init fish --print-full-init | psub)
+   source ("$HOME/.local/bin/starship" init fish --print-full-init | psub)
 end
 
 ## Functions
@@ -88,7 +88,7 @@ function copy
 end
 
 ## Useful aliases
-alias ssh-start = 'eval (ssh-agent -c)'
+alias ssh-start='eval (ssh-agent -c)'
 
 # Replace ls with exa
 alias ls='exa --color=always --group-directories-first --icons' # preferred listing
