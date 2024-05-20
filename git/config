@@ -1,0 +1,24 @@
+[user]
+    name = Norrick McGee 
+    email = Norrick.McGee@gmail.com
+
+[core]
+    editor = nvim  # You can change this to your preferred text editor, like vim, code, etc.
+    pager = less
+    autocrlf = input  # Useful for handling line endings correctly, especially on Windows
+    sshCommand = ssh -i ~/.ssh/norricm_main -F /dev/null
+[color]
+    ui = auto
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    cm = commit
+    df = diff
+    lg = log --graph --oneline --decorate --all
+    last = log -1 HEAD
+    unstage = reset HEAD --
+
+[push]
+    default = simple
