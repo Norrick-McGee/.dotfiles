@@ -15,3 +15,4 @@ alias ....='cd ../../..'
 alias ~="cd ~"
 alias c="clear"
 alias e="exit"
+export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
