@@ -9,7 +9,20 @@ zstyle ':vcs_info:*' unstagedstr '*'
 zstyle ':vcs_info:*' stagedstr '+'
 
 setopt prompt_subst
-PROMPT='%F{blue}%n@%m%f %F{green}%~%f %F{yellow}${vcs_info_msg_0_}%f %# '
+
+function prompt_path() {
+    local current_path="${PWD/#$HOME/~}"
+    local path_parts=(${(s:/:)current_path})
+    local num_parts=${#path_parts}
+    
+    if (( num_parts > 2 )); then
+        echo "${path_parts[-2]}/${path_parts[-1]}"
+    else
+        echo "$current_path"
+    fi
+}
+
+PROMPT='%F{blue}%n@%m%f %F{green}$(prompt_path)%f %F{yellow}${vcs_info_msg_0_}%f %# '
 RPROMPT='%F{red}%(?..[%?])%f'
 
 # For slow environments, replace with:
