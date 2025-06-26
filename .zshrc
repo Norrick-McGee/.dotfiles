@@ -16,3 +16,6 @@ alias ~="cd ~"
 alias c="clear"
 alias e="exit"
 export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/snorks/.lmstudio/bin"

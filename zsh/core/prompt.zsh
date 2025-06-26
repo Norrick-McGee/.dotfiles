@@ -22,8 +22,8 @@ function prompt_path() {
     fi
 }
 
-PROMPT='%F{blue}%n@%m%f %F{green}$(prompt_path)%f %F{yellow}${vcs_info_msg_0_}%f %# '
-RPROMPT='%F{red}%(?..[%?])%f'
+PROMPT='%F{blue}%n@%m%f %F{green}$(prompt_path)%f %F{yellow}${vcs_info_msg_0_}%f%F{red}%(?.. [%?])%f'$'\n''> '
+RPROMPT=''  # Clear RPROMPT (or keep it if you want right-aligned info)
 
 # For slow environments, replace with:
 # PROMPT='%F{blue}%n%f %F{green}%~%f %# '

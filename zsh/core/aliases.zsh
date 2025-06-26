@@ -1,8 +1,11 @@
 # Cross-platform core aliases
-alias la='ls -a'
-alias ll='ls -lh'
-alias lla='ls -lha'
-alias grep='grep --color=auto'
+#
+LS_COMMON_OPTS=(--color=auto)
+ls() { command ls "${LS_COMMON_OPTS[@]}" "$@" }
+la() { ls -A "${LS_COMMON_OPTS[@]}" "$@" }
+ll() { ls -lh "${LS_COMMON_OPTS[@]}" "$@" }
+lla() { ls -lha "${LS_COMMON_OPTS[@]}" "$@" }
+alias grep="grep --color=auto"
 
 # Safe operations
 alias rm='rm -i'
