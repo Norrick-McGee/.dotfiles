@@ -1,3 +1,7 @@
+local is_linux = vim.fn.has("unix") == 1 and vim.fn.has("macunix") == 0
+local is_mac = vim.fn.has("macunix") == 1
+local is_windows = vim.fn.has("win32") == 1
+
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set shiftwidth=2")
